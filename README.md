@@ -1,4 +1,4 @@
-## rs_gstreamer — Intel RealSense GStreamer Source for DeepStream/GStreamer
+## gst-realsensesrc — Intel RealSense GStreamer Source for DeepStream/GStreamer
 
 A custom GStreamer source element (`realsensesrc`) that streams frames from an Intel RealSense D435i camera using Intel librealsense2. The element outputs a single RGB buffer where the top half contains the color image and the bottom half encodes depth values. Designed to be deployed into NVIDIA DeepStream's plugin directory but works with standard GStreamer as well.
 
@@ -29,7 +29,7 @@ The CMake file is configured to place the built library in the DeepStream plugin
 If your DeepStream path differs, either edit `CMakeLists.txt` and change `DEEPSTREAM_PATH`, or set `GST_PLUGIN_PATH` to a directory you control and copy the resulting library there.
 
 ```bash
-cd gstreamer-realsense
+cd gst-realsensesrc
 mkdir -p build && cd build
 cmake ..
 # Build (may require sudo if the output directory is under /opt)
